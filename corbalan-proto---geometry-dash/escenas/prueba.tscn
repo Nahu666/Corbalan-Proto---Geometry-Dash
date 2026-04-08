@@ -6,11 +6,21 @@
 [node name="Node2D" type="Node2D" unique_id=210247986]
 
 [node name="CharacterBody2D" parent="." unique_id=1927361297 instance=ExtResource("1_2jt68")]
-position = Vector2(-128, 768)
+position = Vector2(-128, 640)
 
-[node name="StaticBody2D" parent="." unique_id=656864775 instance=ExtResource("2_mdukl")]
-position = Vector2(1024, 1024)
-scale = Vector2(22.651522, 3.0399997)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1694017552]
+offset = Vector2(600, -100)
+limit_left = -600
+limit_bottom = 1180
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.4
+editor_draw_drag_margin = true
+
+[node name="Ground" parent="." unique_id=656864775 instance=ExtResource("2_mdukl")]
+position = Vector2(2688, 1024)
+scale = Vector2(58.131523, 3.0399997)
 
 [node name="StaticBody2D2" parent="." unique_id=970719671 instance=ExtResource("2_mdukl")]
 position = Vector2(512, 768)
