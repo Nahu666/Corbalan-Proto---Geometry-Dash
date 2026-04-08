@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ccd3mji55ldyb"]
+
+[ext_resource type="PackedScene" uid="uid://61wndvhbm1jk" path="res://objetos/jugador.tscn" id="1_2jt68"]
+[ext_resource type="PackedScene" uid="uid://bkdjme26fv1q6" path="res://objetos/obj_bloque.tscn" id="2_mdukl"]
+
+[node name="Node2D" type="Node2D" unique_id=210247986]
+
+[node name="CharacterBody2D" parent="." unique_id=1927361297 instance=ExtResource("1_2jt68")]
+position = Vector2(-128, 768)
+
+[node name="StaticBody2D" parent="." unique_id=656864775 instance=ExtResource("2_mdukl")]
+position = Vector2(1024, 1024)
+scale = Vector2(22.651522, 3.0399997)
+
+[node name="StaticBody2D2" parent="." unique_id=970719671 instance=ExtResource("2_mdukl")]
+position = Vector2(512, 768)
+
+[node name="StaticBody2D3" parent="." unique_id=1917954583 instance=ExtResource("2_mdukl")]
+position = Vector2(896, 768)
+
+[node name="StaticBody2D4" parent="." unique_id=78339282 instance=ExtResource("2_mdukl")]
+position = Vector2(896, 640)
+
+[node name="StaticBody2D5" parent="." unique_id=1198475787 instance=ExtResource("2_mdukl")]
+position = Vector2(1280, 384)
+
+[node name="StaticBody2D6" parent="." unique_id=319594047 instance=ExtResource("2_mdukl")]
+position = Vector2(1280, 256)
+
+[node name="StaticBody2D7" parent="." unique_id=957499227 instance=ExtResource("2_mdukl")]
+position = Vector2(1280, 128)
+
+[node name="StaticBody2D8" parent="." unique_id=1346284726 instance=ExtResource("2_mdukl")]
+position = Vector2(1920, 768)
