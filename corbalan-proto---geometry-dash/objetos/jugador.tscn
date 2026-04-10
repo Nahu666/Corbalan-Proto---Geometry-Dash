@@ -3,12 +3,30 @@
 [ext_resource type="Script" uid="uid://bws8a1e47dhw2" path="res://scripts/jugador.gd" id="1_3eei6"]
 [ext_resource type="Texture2D" uid="uid://dc77c50mk2pom" path="res://assets/jugador.png" id="2_0xj6y"]
 [ext_resource type="Script" uid="uid://d30igwlhrdk54" path="res://scripts/muerte.gd" id="3_0xj6y"]
+[ext_resource type="Script" uid="uid://bvt8wbhd31l32" path="res://scripts/muerteExterno.gd" id="3_r4068"]
+
+[sub_resource type="GDScript" id="GDScript_0xj6y"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4068"]
 size = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3ub6"]
+size = Vector2(128, 128)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30g6c"]
-size = Vector2(96, 96)
+size = Vector2(32, 32)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1927361297]
 script = ExtResource("1_3eei6")
@@ -16,11 +34,19 @@ script = ExtResource("1_3eei6")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2139020385]
 scale = Vector2(1.0666667, 1.0666667)
 texture = ExtResource("2_0xj6y")
+script = SubResource("GDScript_0xj6y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1376155604]
 rotation = -6.2831855
 shape = SubResource("RectangleShape2D_r4068")
 one_way_collision = true
+
+[node name="externo" type="Area2D" parent="." unique_id=922826536]
+script = ExtResource("3_r4068")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="externo" unique_id=1881660654]
+shape = SubResource("RectangleShape2D_f3ub6")
+debug_color = Color(0, 0.63657296, 0.40714556, 0.41960785)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=109104032]
 script = ExtResource("3_0xj6y")
@@ -29,4 +55,6 @@ script = ExtResource("3_0xj6y")
 shape = SubResource("RectangleShape2D_30g6c")
 debug_color = Color(0.8452447, 0.36196086, 0.30341214, 0.41960785)
 
+[connection signal="area_entered" from="externo" to="externo" method="_on_area_entered"]
+[connection signal="body_entered" from="externo" to="externo" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

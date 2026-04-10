@@ -1,15 +1,22 @@
 extends CharacterBody2D
 
 
-const SPEED = 35500
+const SPEED = 50000
 const JUMP_VELOCITY = -1450
 
-var gravity = 4100
+var gravity = 5500
 
 func _physics_process(delta):
 	# GRAVEDAD
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		$Sprite2D.rotation_degrees += 380 * delta
+	else:
+		var modulo = int($Sprite2D.rotation_degrees) % 90;
+		if modulo > 45:
+			$Sprite2D.rotation_degrees += (90 - modulo)
+		else:
+			$Sprite2D.rotation_degrees -= modulo
 
 	# SALTO
 	if Input.is_action_pressed("salto") and is_on_floor():
@@ -20,3 +27,4 @@ func _physics_process(delta):
 
 
 	move_and_slide()
+	
