@@ -2,4 +2,5 @@ extends Area2D
 
 func _on_area_entered(area):
 	if area.is_in_group("kill"):
-		get_tree().reload_current_scene()
+		$"..".death()
+		self.queue_free()

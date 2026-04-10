@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 50000
+var SPEED = 50000
 const JUMP_VELOCITY = -1450
 
 var gravity = 5500
@@ -28,3 +28,13 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+
+func death():
+	SPEED = 0
+	$Sprite2D.visible = false
+	$AudioStreamPlayer2D.play()
+	$Timer.start()
+	
+
+func _on_timer_timeout():
+	get_tree().reload_current_scene()

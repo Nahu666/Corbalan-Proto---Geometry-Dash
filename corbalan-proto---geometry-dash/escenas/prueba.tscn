@@ -116,6 +116,14 @@ position = Vector2(1152, 768)
 [node name="Area2D4" parent="." unique_id=2121795489 instance=ExtResource("3_mdukl")]
 position = Vector2(1408, 768)
 
+[node name="Area2D11" parent="." unique_id=1815132584 instance=ExtResource("3_mdukl")]
+position = Vector2(1536, 384)
+rotation = -1.5707964
+
+[node name="Area2D12" parent="." unique_id=1360177287 instance=ExtResource("3_mdukl")]
+position = Vector2(1536, 256)
+rotation = -1.5707964
+
 [node name="Area2D5" parent="." unique_id=724064312 instance=ExtResource("3_mdukl")]
 position = Vector2(2176, 768)
 
