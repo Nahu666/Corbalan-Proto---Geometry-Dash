@@ -29,5 +29,9 @@ func _ready():
 			fuerza = 2000
 			sprite.texture = load("res://assets/RedRing.png")
 		
+		5: #negro
+			fuerza = -2000
+			sprite.texture = load("res://assets/BlackRing.png")
+	
 		_ :
 			fuerza = 0
