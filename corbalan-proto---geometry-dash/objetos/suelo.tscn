@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b1tildac1inqv"]
+
+[sub_resource type="GDScript" id="GDScript_x7xaa"]
+script/source = "extends StaticBody2D
+
+
+@onready var jugador = get_node(\"../jugador\")
+
+func _process(delta):
+	position.x = jugador.position.x
+	$Sprite2D.region.rect.position.x += (jugador.SPEED / 60) * delta
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oq578"]
+load_path = "res://.godot/imported/ground.png-328d82a69941a655cdd4638d3455ed11.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnhc7"]
+size = Vector2(2048, 512)
+
+[node name="suelo" type="StaticBody2D" unique_id=706231735]
+script = SubResource("GDScript_x7xaa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=461610852]
+texture_repeat = 2
+position = Vector2(0, -128)
+scale = Vector2(1.025, 1.025)
+texture = SubResource("CompressedTexture2D_oq578")
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1533164340]
+position = Vector2(0, -128)
+shape = SubResource("RectangleShape2D_rnhc7")

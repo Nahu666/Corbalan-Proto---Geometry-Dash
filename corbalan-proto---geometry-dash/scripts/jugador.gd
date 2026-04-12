@@ -4,6 +4,9 @@ extends CharacterBody2D
 var SPEED = 50000
 const JUMP_VELOCITY = -1450
 
+var isOrbe = false
+var fuerzaOrb = 0
+
 var gravity = 5500
 
 func _physics_process(delta):
@@ -25,6 +28,8 @@ func _physics_process(delta):
 
 	velocity.x = SPEED * delta
 
+	if isOrbe and (Input.is_action_just_pressed("salto") or Input.is_action_just_pressed("salto")):
+		velocity.y = -fuerzaOrb
 
 	move_and_slide()
 	
@@ -38,3 +43,14 @@ func death():
 
 func _on_timer_timeout():
 	get_tree().reload_current_scene()
+
+
+func _on_externo_area_entered(area):
+	if area.is_in_group("orbe"):
+		isOrbe = true
+		fuerzaOrb = area.fuerza
+
+func _on_externo_area_exited(area):
+	if area.is_in_group("orbe"):
+		isOrbe = false
+		fuerzaOrb = 0

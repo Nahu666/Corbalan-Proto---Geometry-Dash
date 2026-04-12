@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://61wndvhbm1jk" path="res://objetos/jugador.tscn" id="1_2jt68"]
 [ext_resource type="PackedScene" uid="uid://bkdjme26fv1q6" path="res://objetos/obj_bloque.tscn" id="2_mdukl"]
 [ext_resource type="PackedScene" uid="uid://itymtme5q2ao" path="res://objetos/spike.tscn" id="3_mdukl"]
+[ext_resource type="PackedScene" uid="uid://chq0pll2ar4ql" path="res://objetos/orbe.tscn" id="4_bby4t"]
 
 [node name="Node2D" type="Node2D" unique_id=210247986]
 
@@ -19,12 +20,12 @@ drag_top_margin = 0.4
 drag_bottom_margin = 0.4
 editor_draw_drag_margin = true
 
-[node name="Ground" parent="." unique_id=656864775 groups=["kill"] instance=ExtResource("2_mdukl")]
-position = Vector2(5888, 1024)
-scale = Vector2(114.611534, 3.0399997)
-
 [node name="StaticBody2D2" parent="." unique_id=970719671 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(896, 768)
+
+[node name="StaticBody2D7" parent="." unique_id=656864775 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(9216, 1024)
+scale = Vector2(182.50371, 3.055662)
 
 [node name="StaticBody2D3" parent="." unique_id=1917954583 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(1280, 768)
@@ -61,9 +62,6 @@ position = Vector2(2688, 640)
 
 [node name="StaticBody2D20" parent="." unique_id=1985553333 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(3072, 512)
-
-[node name="StaticBody2D31" parent="." unique_id=1645572901 groups=["kill"] instance=ExtResource("2_mdukl")]
-position = Vector2(3840, 512)
 
 [node name="StaticBody2D25" parent="." unique_id=225802791 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(3328, 640)
@@ -139,5 +137,18 @@ position = Vector2(2816, 768)
 [node name="Area2D10" parent="." unique_id=124642051 instance=ExtResource("3_mdukl")]
 position = Vector2(2944, 768)
 
+[node name="Area2D13" parent="." unique_id=1094197754 instance=ExtResource("3_mdukl")]
+position = Vector2(3712, 768)
+
+[node name="Area2D14" parent="." unique_id=2072646611 instance=ExtResource("3_mdukl")]
+position = Vector2(3840, 768)
+
+[node name="Area2D15" parent="." unique_id=1690156943 instance=ExtResource("3_mdukl")]
+position = Vector2(3968, 768)
+
 [node name="Area2D6" parent="." unique_id=1502139841 instance=ExtResource("3_mdukl")]
 position = Vector2(2048, 768)
+
+[node name="orbe" parent="." unique_id=1088912280 instance=ExtResource("4_bby4t")]
+position = Vector2(3840, 512)
+tipo = 1
