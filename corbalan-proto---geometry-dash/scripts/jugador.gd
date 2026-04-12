@@ -7,6 +7,7 @@ var JUMP_VELOCITY = -1450
 var isOrbe = false
 var fuerzaOrb = 0
 var canInvert = false
+var isUfo = false
 
 var gravity = 5500
 
@@ -23,8 +24,10 @@ func _physics_process(delta):
 			$Sprite2D.rotation_degrees -= modulo
 
 	# SALTO
-	if Input.is_action_pressed("salto") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_pressed("salto"):
+		if isUfo == true or  is_on_floor():
+			velocity.y = JUMP_VELOCITY 
+
 
 
 	velocity.x = SPEED * delta
@@ -50,12 +53,21 @@ func death():
 func _on_timer_timeout():
 	get_tree().reload_current_scene()
 
-
 func _on_externo_area_entered(area):
 	if area.is_in_group("orbe"):
 		isOrbe = true
 		fuerzaOrb = area.fuerza
 		canInvert = area.invertir
+	
+	if area.is_in_group("portal"):
+		match area.tipo:
+			0: #Cubo
+				$Sprite2D.texture = load("res://assets/jugador.png")
+				isUfo = false
+			
+			1: #UFO
+				$Sprite2D.texture = load("res://assets/UFO07.png")
+				isUfo = true
 
 func _on_externo_area_exited(area):
 	if area.is_in_group("orbe"):

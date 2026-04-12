@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bkdjme26fv1q6" path="res://objetos/obj_bloque.tscn" id="2_mdukl"]
 [ext_resource type="PackedScene" uid="uid://itymtme5q2ao" path="res://objetos/spike.tscn" id="3_mdukl"]
 [ext_resource type="PackedScene" uid="uid://chq0pll2ar4ql" path="res://objetos/orbe.tscn" id="4_bby4t"]
+[ext_resource type="PackedScene" uid="uid://noxgu8goc5qf" path="res://objetos/ufoPortal.tscn" id="5_8nejv"]
 
 [node name="Node2D" type="Node2D" unique_id=210247986]
 
@@ -188,3 +189,6 @@ tipo = 1
 [node name="orbe2" parent="." unique_id=2114434847 instance=ExtResource("4_bby4t")]
 position = Vector2(4096, 256)
 tipo = 5
+
+[node name="Area2D19" parent="." unique_id=1251378601 instance=ExtResource("5_8nejv")]
+position = Vector2(4864, 256)

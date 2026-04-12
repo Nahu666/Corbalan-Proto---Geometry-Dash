@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://noxgu8goc5qf"]
+
+[ext_resource type="Texture2D" uid="uid://rl5t212bxk5p" path="res://assets/UFOPortal.png" id="1_hq1ct"]
+[ext_resource type="Script" uid="uid://bv130jmx3toak" path="res://scripts/ufo_portal.gd" id="1_lcyn2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lcyn2"]
+radius = 64.0
+height = 512.0
+
+[node name="Area2D" type="Area2D" unique_id=1251378601 groups=["portal"]]
+script = ExtResource("1_lcyn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1554933634]
+position = Vector2(-3.8146973e-06, 0)
+scale = Vector2(6.8085113, 5.9534883)
+texture = ExtResource("1_hq1ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1098551593]
+shape = SubResource("CapsuleShape2D_lcyn2")
