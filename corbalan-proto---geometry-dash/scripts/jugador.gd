@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 
 var SPEED = 50000
-const JUMP_VELOCITY = -1450
+var JUMP_VELOCITY = -1450
 
 var isOrbe = false
 var fuerzaOrb = 0
+var canInvert = false
 
 var gravity = 5500
 
@@ -30,6 +31,11 @@ func _physics_process(delta):
 
 	if isOrbe and (Input.is_action_just_pressed("salto") or Input.is_action_just_pressed("salto")):
 		velocity.y = -fuerzaOrb
+		if canInvert == true:
+			gravity = -gravity
+			JUMP_VELOCITY = -JUMP_VELOCITY
+			rotation = -rotation
+			isOrbe = false
 
 	move_and_slide()
 	
@@ -49,8 +55,10 @@ func _on_externo_area_entered(area):
 	if area.is_in_group("orbe"):
 		isOrbe = true
 		fuerzaOrb = area.fuerza
+		canInvert = area.invertir
 
 func _on_externo_area_exited(area):
 	if area.is_in_group("orbe"):
 		isOrbe = false
 		fuerzaOrb = 0
+		canInvert = false

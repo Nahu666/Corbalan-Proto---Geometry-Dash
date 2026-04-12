@@ -66,6 +66,21 @@ position = Vector2(3072, 512)
 [node name="StaticBody2D25" parent="." unique_id=225802791 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(3328, 640)
 
+[node name="StaticBody2D33" parent="." unique_id=1540948216 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(4224, 640)
+
+[node name="StaticBody2D34" parent="." unique_id=1368958350 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(4352, 640)
+
+[node name="StaticBody2D35" parent="." unique_id=288702918 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(4480, 640)
+
+[node name="StaticBody2D36" parent="." unique_id=1498578641 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(4608, 640)
+
+[node name="StaticBody2D37" parent="." unique_id=1831124708 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(4736, 640)
+
 [node name="StaticBody2D26" parent="." unique_id=1556784430 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(3328, 256)
 
@@ -151,6 +166,9 @@ position = Vector2(3840, 768)
 
 [node name="Area2D15" parent="." unique_id=1690156943 instance=ExtResource("3_mdukl")]
 position = Vector2(3968, 768)
+
+[node name="Area2D18" parent="." unique_id=1989377434 instance=ExtResource("3_mdukl")]
+position = Vector2(4736, 512)
 
 [node name="Area2D16" parent="." unique_id=1232515317 instance=ExtResource("3_mdukl")]
 position = Vector2(4288, 320)

@@ -4,6 +4,7 @@ extends Area2D
 @export var tipo = 0
 @onready var sprite = $Sprite2D
 var fuerza
+var invertir = false
 
 func _ready():
 	
@@ -25,9 +26,19 @@ func _ready():
 			fuerza = 1500
 			sprite.texture = load("res://assets/YellowRing.png")
 		
+		2: #azul
+			fuerza = 800
+			invertir = true
+			sprite.texture = load("res://assets/CyanRing.png")
+		
 		3: #roja
 			fuerza = 2000
 			sprite.texture = load("res://assets/RedRing.png")
+		
+		4: #verde
+			fuerza = -1500
+			invertir = true
+			sprite.texture = load("res://assets/GreenRing.png")
 		
 		5: #negro
 			fuerza = -2000
