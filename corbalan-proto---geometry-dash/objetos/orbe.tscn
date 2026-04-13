@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3qled4ukeaki" path="res://assets/YellowRing.png" id="2_amtv3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mnlrh"]
-radius = 125.000015
+radius = 187.50003
 
 [node name="orbe" type="Area2D" unique_id=1088912280 groups=["orbe"]]
 script = ExtResource("1_mnlrh")

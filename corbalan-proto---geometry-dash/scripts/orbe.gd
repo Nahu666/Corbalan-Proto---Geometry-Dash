@@ -32,7 +32,7 @@ func _ready():
 			sprite.texture = load("res://assets/CyanRing.png")
 		
 		3: #roja
-			fuerza = 2000
+			fuerza = 2300
 			sprite.texture = load("res://assets/RedRing.png")
 		
 		4: #verde
