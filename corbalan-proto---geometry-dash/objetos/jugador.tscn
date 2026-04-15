@@ -34,7 +34,7 @@ _data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.10112369), 0.0, 0.0, 0, 
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_f3ub6"]
-_data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.49438208), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.20224726), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="jugador" type="CharacterBody2D" unique_id=1927361297]
@@ -86,7 +86,8 @@ scale_amount_curve = SubResource("Curve_30g6c")
 [node name="arrastre" type="CPUParticles2D" parent="." unique_id=290640017]
 z_index = -1
 position = Vector2(-32, 56)
-amount = 15
+amount = 20
+lifetime = 0.5
 gravity = Vector2(-100, -20)
 initial_velocity_min = 30.0
 initial_velocity_max = 30.0
