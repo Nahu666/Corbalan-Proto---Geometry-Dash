@@ -6,6 +6,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_mnlrh"]
 radius = 187.50003
 
+[sub_resource type="Curve" id="Curve_amtv3"]
+_data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3595506), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="orbe" type="Area2D" unique_id=1088912280 groups=["orbe"]]
 script = ExtResource("1_mnlrh")
 
@@ -18,3 +22,15 @@ texture = ExtResource("2_amtv3")
 position = Vector2(-1.9073486e-06, 0)
 scale = Vector2(0.51199996, 0.5059289)
 shape = SubResource("CircleShape2D_mnlrh")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=970920387]
+z_index = -1
+amount = 10
+lifetime = 0.75
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_amtv3")

@@ -32,7 +32,6 @@ func _physics_process(delta):
 			$arrastre.emitting = false
 
 
-
 	velocity.x = SPEED * delta
 
 	if isOrbe and (Input.is_action_just_pressed("salto") or Input.is_action_just_pressed("salto")):
@@ -48,7 +47,7 @@ func _physics_process(delta):
 
 func death():
 	SPEED = 0
-	$Sprite2D.visible = false
+	$Sprite2D.visible = false 
 	$"explosión".emitting = true
 	$arrastre.visible = false
 	$AudioStreamPlayer2D.play()

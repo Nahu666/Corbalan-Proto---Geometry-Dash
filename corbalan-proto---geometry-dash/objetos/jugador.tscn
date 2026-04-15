@@ -94,6 +94,7 @@ initial_velocity_max = 30.0
 scale_amount_min = 5.0
 scale_amount_max = 20.0
 scale_amount_curve = SubResource("Curve_f3ub6")
+color = Color(1, 1, 1, 0.49019608)
 
 [connection signal="area_entered" from="externo" to="." method="_on_externo_area_entered"]
 [connection signal="area_entered" from="externo" to="externo" method="_on_area_entered"]
