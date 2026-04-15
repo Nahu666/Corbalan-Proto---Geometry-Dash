@@ -46,6 +46,7 @@ func _physics_process(delta):
 func death():
 	SPEED = 0
 	$Sprite2D.visible = false
+	$CPUParticles2D.emitting = true
 	$AudioStreamPlayer2D.play()
 	$Timer.start()
 	
