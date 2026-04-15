@@ -22,11 +22,14 @@ func _physics_process(delta):
 			$Sprite2D.rotation_degrees += (90 - modulo)
 		else:
 			$Sprite2D.rotation_degrees -= modulo
+			$arrastre.emitting = true
+
 
 	# SALTO
 	if Input.is_action_pressed("salto"):
 		if isUfo == true or  is_on_floor():
-			velocity.y = JUMP_VELOCITY 
+			velocity.y = JUMP_VELOCITY
+			$arrastre.emitting = false
 
 
 
@@ -46,7 +49,8 @@ func _physics_process(delta):
 func death():
 	SPEED = 0
 	$Sprite2D.visible = false
-	$CPUParticles2D.emitting = true
+	$"explosión".emitting = true
+	$arrastre.visible = false
 	$AudioStreamPlayer2D.play()
 	$Timer.start()
 	

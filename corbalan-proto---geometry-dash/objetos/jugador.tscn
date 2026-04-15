@@ -33,6 +33,10 @@ size = Vector2(32, 32)
 _data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.10112369), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Curve" id="Curve_f3ub6"]
+_data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.49438208), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="jugador" type="CharacterBody2D" unique_id=1927361297]
 script = ExtResource("1_3eei6")
 
@@ -65,7 +69,7 @@ debug_color = Color(0.8452447, 0.36196086, 0.30341214, 0.41960785)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1234934441]
 stream = ExtResource("5_30g6c")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1666964813]
+[node name="explosión" type="CPUParticles2D" parent="." unique_id=1666964813]
 emitting = false
 amount = 60
 lifetime = 0.75
@@ -78,6 +82,17 @@ initial_velocity_max = 400.0
 scale_amount_min = 3.0
 scale_amount_max = 10.0
 scale_amount_curve = SubResource("Curve_30g6c")
+
+[node name="arrastre" type="CPUParticles2D" parent="." unique_id=290640017]
+z_index = -1
+position = Vector2(-32, 56)
+amount = 15
+gravity = Vector2(-100, -20)
+initial_velocity_min = 30.0
+initial_velocity_max = 30.0
+scale_amount_min = 5.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_f3ub6")
 
 [connection signal="area_entered" from="externo" to="." method="_on_externo_area_entered"]
 [connection signal="area_entered" from="externo" to="externo" method="_on_area_entered"]
