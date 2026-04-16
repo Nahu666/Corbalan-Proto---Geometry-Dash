@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://itymtme5q2ao" path="res://objetos/spike.tscn" id="3_mdukl"]
 [ext_resource type="PackedScene" uid="uid://chq0pll2ar4ql" path="res://objetos/orbe.tscn" id="4_bby4t"]
 [ext_resource type="AudioStream" uid="uid://cd5s74ft5fiwm" path="res://sonidos/Bailan Rochas y Chetas.mp3" id="5_8nejv"]
+[ext_resource type="Texture2D" uid="uid://duivmaa3o86tw" path="res://assets/ChainDecor01.webp" id="6_e5wxq"]
+[ext_resource type="PackedScene" uid="uid://cxhl3d28l0poo" path="res://objetos/wind.tscn" id="7_ux50w"]
 
 [node name="Node2D" type="Node2D" unique_id=210247986]
 
@@ -280,6 +282,9 @@ position = Vector2(9216, 768)
 [node name="Area2D43" parent="." unique_id=1732338594 instance=ExtResource("3_mdukl")]
 position = Vector2(9600, 768)
 
+[node name="Area2D44" parent="." unique_id=2116807920 instance=ExtResource("3_mdukl")]
+position = Vector2(9984, 512)
+
 [node name="StaticBody2D41" parent="." unique_id=77573870 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(5632, -384)
 
@@ -370,6 +375,10 @@ position = Vector2(7040, 256)
 position = Vector2(9408, 576)
 tipo = 1
 
+[node name="orbe8" parent="." unique_id=924137149 instance=ExtResource("4_bby4t")]
+position = Vector2(10112, 320)
+tipo = 5
+
 [node name="StaticBody2D9" parent="." unique_id=1271153638 groups=["kill"] instance=ExtResource("2_mdukl")]
 position = Vector2(8448, 384)
 
@@ -383,3 +392,75 @@ rotation = -1.5707964
 [node name="Area2D36" parent="." unique_id=922604731 instance=ExtResource("3_mdukl")]
 position = Vector2(8320, 256)
 rotation = -1.5707964
+
+[node name="StaticBody2D67" parent="." unique_id=1983100069 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(10368, 326)
+
+[node name="StaticBody2D68" parent="." unique_id=571002058 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(10368, 197.99998)
+
+[node name="Area2D45" parent="." unique_id=870737602 instance=ExtResource("3_mdukl")]
+position = Vector2(10240, 326)
+rotation = -1.5707964
+
+[node name="Area2D46" parent="." unique_id=1370606299 instance=ExtResource("3_mdukl")]
+position = Vector2(10240, 197.99998)
+rotation = -1.5707964
+
+[node name="StaticBody2D69" parent="." unique_id=354997621 groups=["kill"] instance=ExtResource("2_mdukl")]
+position = Vector2(10368, 454)
+
+[node name="Area2D47" parent="." unique_id=1598283059 instance=ExtResource("3_mdukl")]
+position = Vector2(10240, 454)
+rotation = -1.5707964
+
+[node name="ChainDecor01" type="Sprite2D" parent="." unique_id=1967214070]
+z_index = -3
+position = Vector2(1664, 58)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor02" type="Sprite2D" parent="." unique_id=1196656069]
+z_index = -3
+position = Vector2(4352, 192)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor03" type="Sprite2D" parent="." unique_id=352434073]
+z_index = -3
+position = Vector2(4864, 192.00002)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor04" type="Sprite2D" parent="." unique_id=2095816192]
+z_index = -3
+position = Vector2(5632, -576)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor05" type="Sprite2D" parent="." unique_id=812494711]
+z_index = -3
+position = Vector2(8448, 64)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor06" type="Sprite2D" parent="." unique_id=1419538153]
+z_index = -3
+position = Vector2(8704, 192)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor07" type="Sprite2D" parent="." unique_id=1091109350]
+z_index = -3
+position = Vector2(8960, 192.00002)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="ChainDecor08" type="Sprite2D" parent="." unique_id=1272993287]
+z_index = -3
+position = Vector2(10368, 6)
+scale = Vector2(1, 0.95714283)
+texture = ExtResource("6_e5wxq")
+
+[node name="wind" parent="." unique_id=387465729 instance=ExtResource("7_ux50w")]
+position = Vector2(576, 320)

@@ -37,6 +37,10 @@ point_count = 2
 _data = [Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.20224726), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Curve" id="Curve_d002a"]
+_data = [Vector2(0.25531915, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.49438208), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="jugador" type="CharacterBody2D" unique_id=1927361297]
 script = ExtResource("1_3eei6")
 
@@ -95,6 +99,18 @@ scale_amount_min = 5.0
 scale_amount_max = 20.0
 scale_amount_curve = SubResource("Curve_f3ub6")
 color = Color(1, 1, 1, 0.49019608)
+
+[node name="wind" type="CPUParticles2D" parent="." unique_id=770964430]
+modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(2000, -200)
+amount = 30
+lifetime = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(1, 600)
+gravity = Vector2(-500, 0)
+scale_amount_min = 10.0
+scale_amount_max = 30.0
+scale_amount_curve = SubResource("Curve_d002a")
 
 [connection signal="area_entered" from="externo" to="." method="_on_externo_area_entered"]
 [connection signal="area_entered" from="externo" to="externo" method="_on_area_entered"]
